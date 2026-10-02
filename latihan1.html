@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Pengembang Web - Alex Pratama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Navigasi & Saklar Tema -->
+  <header class="navbar">
+    <a href="#" class="brand-logo">DevPortfolio</a>
+    <nav class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <button id="theme-toggle" class="btn-theme" aria-label="Ganti Tema">
+      Mode Gelap
+    </button>
+  </header>
+
+  <!-- 2. Hero Section (Profil Utama) -->
+  <section class="hero-section" id="about">
+    <img 
+      src="avatar.jpg" 
+      alt="Foto Profil Alex Pratama" 
+      class="hero-avatar">
+    <h1 class="hero-title">Halo, Saya Alex Pratama</h1>
+    <p class="hero-subtitle">
+      Junior Frontend Web Developer yang berfokus membangun antarmuka web modern, cepat, dan responsif.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Lihat Proyek Saya</a>
+      <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <!-- 3. Section Keahlian Teknis -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Keahlian Teknis</h2>
+      <div class="skills-container">
+        <span class="skill-badge">HTML5 Semantik</span>
+        <span class="skill-badge">CSS3 Flexbox & Grid</span>
+        <span class="skill-badge">JavaScript Modern (ES6+)</span>
+        <span class="skill-badge">Desain Responsif Mobile</span>
+        <span class="skill-badge">Git & GitHub</span>
+      </div>
+    </section>
+
+    <!-- 4. Section Galeri Proyek -->
+    <section class="section" id="projects">
+      <h2 class="section-title">Portofolio Proyek</h2>
+      
+      <!-- Filter Kategori Proyek -->
+      <div class="filter-wrapper">
+        <button type="button" class="filter-btn active" data-filter="all">Semua</button>
+        <button type="button" class="filter-btn" data-filter="web">Web App</button>
+        <button type="button" class="filter-btn" data-filter="ui">UI Design</button>
+      </div>
+
+      <!-- Grid Kartu Proyek -->
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="web">
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3 class="project-title">E-Commerce Dashboard</h3>
+            <p class="project-desc">Aplikasi dashboard analitik penjualan interaktif dengan visualisasi data grafik.</p>
+            <a href="#" class="project-link">Lihat Detail Proyek &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="ui">
+          <div class="project-info">
+            <span class="project-tag">UI Design</span>
+            <h3 class="project-title">Travel Landing Page</h3>
+            <p class="project-desc">Halaman arahan pemesanan paket wisata dengan tipografi modern dan tata letak dinamis.</p>
+            <a href="#" class="project-link">Lihat Detail Proyek &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3 class="project-title">Task Management System</h3>
+            <p class="project-desc">Aplikasi produktivitas harian dengan fitur manajemen aktivitas dan LocalStorage.</p>
+            <a href="#" class="project-link">Lihat Detail Proyek &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. Section Formulir Kontak -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Hubungi Saya</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="sender-name">Nama Lengkap:</label>
+          <input 
+            type="text" 
+            id="sender-name" 
+            class="form-input" 
+            placeholder="Masukkan nama Anda" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="sender-email">Alamat Email:</label>
+          <input 
+            type="email" 
+            id="sender-email" 
+            class="form-input" 
+            placeholder="nama@domain.com" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="sender-message">Pesan Anda:</label>
+          <textarea 
+            id="sender-message" 
+            class="form-textarea" 
+            rows="4" 
+            placeholder="Tuliskan pesan Anda di sini..." 
+            required></textarea>
+        </div>
+
+        <button type="submit" id="btn-submit" class="btn btn-primary">
+          Kirim Pesan
+        </button>
+      </form>
+      
+      <!-- Wadah Pesan Konfirmasi Interaktif (Diisi oleh JS) -->
+      <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2026 Alex Pratama. Dibuat menggunakan HTML, CSS, dan JavaScript murni.</p>
+  </footer>
+
+  <!-- Menghubungkan berkas JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
