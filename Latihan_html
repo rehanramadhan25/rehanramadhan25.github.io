@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Pengembang Web - Alex Pratama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Konten portofolio akan dibangun bertahap di dalam tag body -->
+</body>
+  <!-- 1. Navigasi & Saklar Tema -->
+  <header class="navbar">
+    <a href="#" class="brand-logo">DevPortfolio</a>
+    <nav class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <button id="theme-toggle" class="btn-theme" aria-label="Ganti Tema">
+      Mode Gelap
+    </button>
+  </header>
+</html>
